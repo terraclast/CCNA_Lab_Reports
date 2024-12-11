@@ -1,0 +1,18 @@
+# Ignore all files in the root directory except specific ones
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+
+# Allow all subdirectories
+!labs/**
+
+# Ignore temporary or editor-specific files
+*.swp
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignore PacketTracer files
+*.pkt
