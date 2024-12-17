@@ -5,6 +5,7 @@
 !/LICENSE
 
 # Allow all subdirectories
+!labs/
 !labs/**
 
 # Ignore temporary or editor-specific files
