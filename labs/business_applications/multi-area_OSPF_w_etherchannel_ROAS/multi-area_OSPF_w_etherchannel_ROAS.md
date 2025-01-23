@@ -1,4 +1,4 @@
-Here’s a lab that integrates **EtherChannel (L2 and L3)**, **resiliency**, **multi-area OSPF**, and **Router-on-a-Stick (ROAS) with at least two subnets**:
+**EtherChannel (L2 and L3)**, **resiliency**, **multi-area OSPF**, and **Router-on-a-Stick (ROAS) with at least two subnets**:
 
 ---
 
@@ -22,10 +22,21 @@ You are designing a network for a medium-sized business. The network must:
 ### **Topology Overview**
 | **Device**  | **Connections**                          |
 |-------------|------------------------------------------|
-| R1 (Router) | Connects to L3 Switch (Core) and Area 1  |
-| R2 (Router) | Connects to L3 Switch (Core) and Area 2  |
-| SW1 (Core)  | Core switch, connects to R1, R2, and SW2 |
-| SW2 (Access)| Connects to PCs for VLANs 10 and 20      |
+| R1 (2911)   | Connects to L3 Switch (Core) and Area 1  |
+| R2 (2911)   | Connects to L3 Switch (Core) and Area 2  |
+| SW1 (3560)  | Core switch, connects to R1, R2, and SW2 |
+| SW2 (2960)  | Connects to PCs for VLANs 10 and 20      |
+
+| **Device**    | **Port**      | **Neighbor**  |
+|---------------|---------------|---------------|
+| R1            | g0/0          | SW1           |
+|               | g0/1          | SW1           |
+|               | g0/2          | R2            |
+| R2            | g0/0          | SW1           |
+|               | g0/1          | SW1           |
+|               | g0/2          | R1            |
+| SW1           | G0/1          |               |
+|               |               |               |
 
 ---
 
